@@ -1,6 +1,8 @@
 import 'styles/global.scss';
 import {foodPartyModule} from './app/food-party.module';
 
+
+
 try {
   window.angular.bootstrap(document.body, [foodPartyModule.name], {
     strictDi: true
