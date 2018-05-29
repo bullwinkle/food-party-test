@@ -31,6 +31,8 @@ export function configureFoodPartyRouter($stateProvider) {
           
           <fp-media-element></fp-media-element>
           
+          <fp-fibonacci></fp-fibonacci>
+          
         </fp-home-page>
       `
     })
