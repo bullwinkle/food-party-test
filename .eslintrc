@@ -1,0 +1,170 @@
+#extends:
+#  - google
+#  - eslint:recommended
+
+plugins:
+  - angular
+
+parserOptions:
+  ecmaVersion: 6
+  sourceType: module
+  ecmaFeatures:
+    modules: true
+    experimentalObjectRestSpread: true
+
+rules:
+  # eslint rules
+  eqeqeq: 1
+
+  # Angular rules
+  # Possible Errors
+
+  # Avoid mistakes when naming methods defined on the scope object
+  angular/avoid-scope-typos: 1
+  # disallow to reference modules with variables and require to use the getter syntax instead angular.module('myModule') (y022)
+  angular/module-getter: 1
+  # disallow to assign modules to variables (linked to module-getter (y021)
+  angular/module-setter: 1
+  # disallow use of internal angular properties prefixed with $$
+  angular/no-private-call: 2
+
+  # Best Practices
+
+  # limit the number of angular components per file (y001)
+  angular/component-limit: 1
+  # require the use of controllerAs in routes or states (y031)
+  angular/controller-as-route: 1
+  # require and specify a capture variable for this in controllers (y032)
+  angular/controller-as-vm: 1
+  # disallow assignments to $scope in controllers (y031)
+  angular/controller-as: 1
+  # use $q(function(resolve, reject){}) instead of $q.deferred
+  angular/deferred: 2
+  # disallow unused DI parameters
+  angular/di-unused: 1
+  # disallow any other directive restrict than 'A' or 'E' (y074)
+  angular/directive-restrict: 2
+  # disallow empty controllers
+  angular/empty-controller: 2
+  # disallow use of controllers (according to the component first pattern)
+  angular/no-controller: 0
+  # disallow the use of inline templates
+  angular/no-inline-template: 2
+  # keep run functions clean and simple (y171)
+  angular/no-run-logic: 1
+  # disallow DI of specified services for other angular components ($http for controllers, filters and directives)
+  angular/no-services: 1
+  # require $on and $watch deregistration callbacks to be saved in a variable
+  angular/on-watch: 1
+  angular/prefer-component: 1
+
+  # Deprecated Angular Features
+
+  # use $cookies instead of $cookieStore
+  angular/no-cookiestore: 2
+  # disallow the deprecated directive replace property
+  angular/no-directive-replace: 1
+  # disallow the $http methods success() and error()
+  angular/no-http-callback: 2
+
+
+  # Naming
+
+  # require and specify a prefix for all component names
+  angular/component-name: 2
+  # require and specify a prefix for all constant names (y125)
+  angular/constant-name: 2
+  # require and specify a prefix for all controller names (y123, y124)
+  angular/controller-name: 1
+  # require and specify a prefix for all directive names (y073, y126)
+  angular/directive-name: 2
+  # require and specify a prefix for all factory names (y125)
+  angular/factory-name: 2
+  # require and specify a consistent component name pattern (y120, y121)
+  angular/file-name: [1, { "nameStyle":"dash", "typeSeparator":"dot", "ignoreTypeSuffix":true }]
+  # require and specify a prefix for all filter names
+  angular/filter-name: 2
+  # require and specify a prefix for all module names (y127)
+  angular/module-name: 2
+  # require and specify a prefix for all provider names (y125)
+  angular/provider-name: 2
+  # require and specify a prefix for all service names (y125)
+  angular/service-name: 2
+  # require and specify a prefix for all value names (y125)
+  angular/value-name: 2
+
+  # Conventions
+
+  # require DI parameters to be sorted alphabetically
+  angular/di-order: 1
+  # require a consistent DI syntax
+  angular/di: [1, "$inject"]
+  # unittest inject functions should only consist of assignments from injected values to describe block variables
+  angular/dumb-inject: 2
+  # require and specify a consistent function style for components ('named' or 'anonymous') (y024)
+  angular/function-type: [1, "named"]
+  # require a consistent order of module dependencies
+  angular/module-dependency-order: 1
+  # use factory() instead of service() (y040)
+  angular/no-service-method: 2
+  # require all DI parameters to be located in their own line
+  angular/one-dependency-per-line: 0
+  # disallow different rest service and specify one of '$http', '$resource', 'Restangular'
+  angular/rest-service: [2, "$http"]
+  # require and specify consistent use $scope.digest() or $scope.apply()
+  angular/watchers-execution: 1
+
+  # Angular Wrappers
+
+  # use angular.element instead of $ or jQuery
+  angular/angularelement: 1
+  # use angular.isDefined and angular.isUndefined instead of other undefined checks
+  angular/definedundefined: 1
+  # use $document instead of document (y180)
+  angular/document-service: 1
+  # use angular.forEach instead of native Array.prototype.forEach
+  angular/foreach: 0
+  # use $interval instead of setInterval (y181)
+  angular/interval-service: 1
+  # use angular.fromJson and 'angular.toJson' instead of JSON.parse and JSON.stringify
+  angular/json-functions: 0
+  # use the $log service instead of the console methods
+  angular/log: 1
+  # require to use angular.mock methods directly
+  angular/no-angular-mock: 1
+  # disallow to wrap angular.element objects with jQuery or $
+  angular/no-jquery-angularelement: 2
+  # use $timeout instead of setTimeout (y181)
+  angular/timeout-service: 1
+  # use angular.isArray instead of typeof comparisons
+  angular/typecheck-array: 2
+  # use angular.isDate instead of typeof comparisons
+  angular/typecheck-date: 2
+  # use angular.isFunction instead of typeof comparisons
+  angular/typecheck-function: 2
+  # use angular.isNumber instead of typeof comparisons
+  angular/typecheck-number: 2
+  # use angular.isObject instead of typeof comparisons
+  angular/typecheck-object: 2
+  # use angular.isString instead of typeof comparisons
+  angular/typecheck-string: 2
+  # use $window instead of window (y180)
+  angular/window-service: 1
+
+  # Misspelling
+
+  # Check for common misspelling $on('destroy', ...).
+  angular/on-destroy: 2
+
+
+
+globals:
+  angular: true
+  FB: true
+  firebase: true
+  jQuery: true
+  $: true
+  Chart: true
+
+settings:
+  angular: 1

@@ -1,8 +1,14 @@
-console.warn('ENTRY: main');
+import 'styles/global.scss';
+import {foodPartyModule} from './app/food-party.module';
 
 window.addEventListener('load',()=>{
-	const containerEl = document.getElementById('app-container');
-  containerEl.innerHTML = 'LOADED!'
+	try {
+    window.angular.bootstrap(document.body, [foodPartyModule.name], {
+      strictDi: true
+    });
+  } catch (err) {
+	  console.warn('failed to load/bootstrap app', err);
+  }
 });
 
 
@@ -13,3 +19,6 @@ if (process.env.ENV === 'development' ) {
 	}
 
 }
+
+
+console.warn('ENTRY: main');

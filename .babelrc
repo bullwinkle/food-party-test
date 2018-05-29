@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      },
+      "modules": false
+    }]
+  ],
+  "plugins": [
+    "transform-decorators",
+    ["@babel/plugin-proposal-object-rest-spread", { "useBuiltIns": true }],
+    "@babel/plugin-syntax-dynamic-import",
+    "angularjs-annotate"
+  ],
+  "ignore": ["**/*.spec.js"]
+}
