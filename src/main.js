@@ -1,16 +1,13 @@
 import 'styles/global.scss';
 import {foodPartyModule} from './app/food-party.module';
 
-window.addEventListener('load',()=>{
-	try {
-    window.angular.bootstrap(document.body, [foodPartyModule.name], {
-      strictDi: true
-    });
-  } catch (err) {
-	  console.warn('failed to load/bootstrap app', err);
-  }
-});
-
+try {
+  window.angular.bootstrap(document.body, [foodPartyModule.name], {
+    strictDi: true
+  });
+} catch (err) {
+  console.warn('failed to load/bootstrap app', err);
+}
 
 if (process.env.ENV === 'development' ) {
 

@@ -5,10 +5,10 @@
   ng-transclude {
     & > * {
       display: block;
-      margin-bottom: 30px;
+      border: 1px dashed gray;
+      padding: 5px;
+      margin-top: 20px;
     }
   }
 
 }
-
-// local styles
