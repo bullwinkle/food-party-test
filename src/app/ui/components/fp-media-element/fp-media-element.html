@@ -1,12 +1,14 @@
-<div class="{{ $styles['fp-media-element-component'] }}">
+<div class="fp-media-element-component">
   <h1>[component: fp-media-element]</h1>
 
   <div>
-    <img src="https://picsum.photos/200/300" width="200" height="300" alt="example image">
+    <img
+      ng-src="{{ $ctrl.imageSrc }}"
+      width="300"
+      height="200"
+      alt="example image"
+      ng-click="$ctrl.onImageClick($event)"
+    >
   </div>
-  <div>
-    <button>Change image</button>
-  </div>
-
 
 </div>

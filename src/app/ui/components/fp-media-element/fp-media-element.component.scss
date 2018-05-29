@@ -2,11 +2,8 @@
 
 .fp-media-element-component {
 
-  &:global { 
-  
-    // global styles
-    
+  img {
+    cursor: pointer;
   }
-}
 
-// local styles
+}
