@@ -1,0 +1,17 @@
+.vscode
+.idea
+.DS_Store
+debug.log
+
+node_modules
+bower_components
+dist
+/public
+!conf_sample.js
+/config.json
+/public
+!/public/conf_sample.js
+.tmp
+tmp
+*.swp
+/.env
