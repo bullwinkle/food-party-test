@@ -40,7 +40,7 @@ const cssLoaderOptions = {
 };
 
 const cssModuleOptions = {
-  modules: true,
+  modules: false,
   localIdentName: '[hash:base64:12]',
   camelCase: 'dashes'
 };

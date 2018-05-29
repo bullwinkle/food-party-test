@@ -35,7 +35,7 @@ const cssLoaderOptions = {
 };
 
 const cssModuleOptions = {
-  modules: true,
+  modules: false,
   localIdentName: '[local]--[hash:base64:6]',
   camelCase: 'dashes'
 };

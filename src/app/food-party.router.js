@@ -15,13 +15,23 @@ export function configureFoodPartyRouter($stateProvider) {
     .state('foodParty.index', {
       url: '/',
       template: `
-        <fp-button-component
-          button-text="'Super button!'"
-          button-state-name="'default'">
-        </fp-button-component>
+        <fp-home-page>
         
-        <fp-input-component></fp-input-component>
-        <fp-media-element-component></fp-media-element-component>
+          <fp-button
+            button-text="'Super button!'"
+            button-state-name="'default'">
+          </fp-button>
+          
+          <fp-input
+            name="validation"
+            ng-model="$parent.$ctrl.inputModel"
+            fp-placeholder="Just english letters please"
+            fp-validate-fn="$parent.$ctrl.validateInput(value)">
+          </fp-input>
+          
+          <fp-media-element></fp-media-element>
+          
+        </fp-home-page>
       `
     })
 

@@ -22,5 +22,6 @@ export const FpAppComponent = {
     $onDestroy () {
       console.log('$onDestroy');
     }
+
   }
 };

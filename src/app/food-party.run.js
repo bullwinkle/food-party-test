@@ -1,7 +1,13 @@
 export function onGplansRun (
-  $transitions
+  $transitions,
+  $rootScope
 ) {
   "ngInject";
+
+  $rootScope.validateInput = function (value) {
+    console.warn('validateInput 2',value);
+    return /^[a-zA-Z]+$/.test(value);
+  }
 
   const isLog = true;
 

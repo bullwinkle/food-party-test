@@ -1,12 +1,36 @@
 @import '~styles/variables';
 
-.fp-input-component {
+fp-input {
 
-  &:global { 
-  
-    // global styles
-    
+  &.ng-valid {
+    .fp-input-component {
+      border-color: green;
+    }
+  }
+  &.ng-invalid {
+    .fp-input-component {
+      border-color: red;
+    }
   }
 }
 
-// local styles
+.fp-input-component {
+
+  padding: 4px;
+
+  border: {
+    color: transparent;
+    width: 2px;
+    style: solid;
+  }
+
+  input {
+    padding: 3px;
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+}
