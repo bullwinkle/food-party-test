@@ -15,7 +15,11 @@ export function configureFoodPartyRouter($stateProvider) {
     .state('foodParty.index', {
       url: '/',
       template: `
-        <fp-button-component></fp-button-component>
+        <fp-button-component
+          button-text="'Super button!'"
+          button-state-name="'default'">
+        </fp-button-component>
+        
         <fp-input-component></fp-input-component>
         <fp-media-element-component></fp-media-element-component>
       `
