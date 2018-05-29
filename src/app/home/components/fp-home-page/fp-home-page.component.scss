@@ -2,11 +2,13 @@
 
 .fp-home-page-component {
 
-  &:global { 
-  
-    // global styles
-    
+  ng-transclude {
+    & > * {
+      display: block;
+      margin-bottom: 30px;
+    }
   }
+
 }
 
 // local styles
