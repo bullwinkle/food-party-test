@@ -10,14 +10,18 @@ export const FpFibonacciComponent = {
       console.log(this);
       this.$interval = $interval;
       this.endValue = 0;
-      this.currentValue = 10;
+      this.currentValue = 0;
     }
 
     startCounting () {
+      let num = 0;
       this.startCounting.interval = this.$interval(()=>{
-        const f = this.gitNextFibonacci(this.currentValue-0);
-        console.log(f)
+        const f = this.gitNextFibonacci(num++);
+        console.log(f);
         this.currentValue = f;
+        if (this.currentValue >= this.endValue) {
+          clearInterval(this.startCounting.interval);
+        }
       },1000)
     }
 
