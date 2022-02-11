@@ -57,7 +57,7 @@
     "ng-annotate-loader": "^0.6.1",
     "ng-cache-loader": "^0.0.26",
     "nginject-loader": "^2.1.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
     "postcss": "^6.0.21",
     "postcss-cssnext": "^3.1.0",
